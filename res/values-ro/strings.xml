@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Testare</string>
+    <string name="edit_message">introduceti mesajul aici</string>
+    <string name="button_send">Trimite</string>
+    <string name="menu_settings">Setari</string>
+    <string name="title_activity_main">ActivitatePrincipala</string>
+    <string name="title_activity_display_message">Mesajul Meu</string>
+    <string name="action_settings">Setari</string>
+    <string name="hello_world">Buna ziua!</string>
+
+</resources>
