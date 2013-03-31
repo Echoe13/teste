@@ -8,14 +8,10 @@ import android.util.Log;
 
 /**
  * ConnectionBluetooth
- * Extends the class Connection.
+ * Extinde clasa Connection.
  * 
- * It defines the specific connection layer for a bluetooth connection,
- * which consists in the management of a BluetoothSocket.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Defineste stratul specific de conexiune pentru o comunicatie Bluetooth,
+ * care consta in managementul unui BluetoothSocket.
  */
 public class ConnectionBluetooth extends Connection {
 	private static final long serialVersionUID = -6945126230070252386L;

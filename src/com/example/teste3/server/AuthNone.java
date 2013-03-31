@@ -2,13 +2,8 @@ package com.example.teste3.server;
 
 /**
  * AuthNone
- * Extends AuthMethod.
- * 
- * Accepts every new clients if the limit of connected client is not reached.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde AuthMethod.
+ * Accepta orice client now, in limita numarului maxim de conexiuni acceptate.
  */
 public class AuthNone implements AuthMethod {
 

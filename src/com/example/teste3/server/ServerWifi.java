@@ -11,11 +11,7 @@ import android.util.Log;
 
 /**
  * ServerWifi
- * Extends Server in order to instantiate the ConnectionWifi.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde Server pentru a instantia ConnectionWifi.
  */
 public class ServerWifi extends Server {
 	private ServerSocket serverSocket;

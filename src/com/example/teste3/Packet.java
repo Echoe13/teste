@@ -4,14 +4,9 @@ import java.io.Serializable;
 
 /**
  * Packet
- * Generic class that is used by all the connection types (Wifi, Bluetooth)
- * to send serializable objects through network.
- * 
- * The recipient can behave accordingly to the command type.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Clasa generica folosita de ambele tipuri de conexiune (Wifi, Bluetooth)
+ * pentru a trimite obiecte serializabile prin retea.
+ * Recipientul se poate comporta potrivit informatiei transmise.
  */
 public class Packet implements Serializable {
 

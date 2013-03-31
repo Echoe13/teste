@@ -40,19 +40,16 @@ import android.util.Log;
 
 /**
  * Application Manager
- * Extends the Application class from the Android SDK.
- * This class is instantiated automatically when the process is created.
- * This implementation follows the Singleton design pattern, restricting the
- * instantation of the class to one object only.
+ * Extinde clasa Application din SDK-ul Android.
+ * Clasa e instantiata automat la pornirea Activitatii.
+ * Aceasta implementare urmareste modelul de design Singleton, restrictionand
+ * instantierea clasei la un singur obiect.
  * 
- * Instantiates the client side or the server side of the application
- * Manages preferences, settings which are stored in a file
- * Declares the BroadcastReceivers and the handler required globally by 
- * the application
+ * Vezi: http://en.wikipedia.org/wiki/Singleton_pattern
  * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Instantiaza partea de Client sau Server a aplicatiei.
+ * Administreaza preferintele, setari care sunt stocate intr-un fisier.
+ * Declara BroadcastReceivers si handler-ul cerute la nivel global de catre aplicatie.
  */
 public class ApplicationManager extends Application {
                        
@@ -411,7 +408,7 @@ public class ApplicationManager extends Application {
 			}
 		}
 		try {
-			//BufferedWriter for performance, true to set append to file flag
+			//BufferedWriter pentru performanta, true pentru setarea flag-ului de adaugare la fisier
 			BufferedWriter buf = new BufferedWriter(new FileWriter(logFile, true)); 
 			buf.append("" + DateFormat.getDateTimeInstance().format(new Date()) + "\n" + " : " + text + "\n");
 			buf.newLine();

@@ -5,14 +5,10 @@ import java.util.Set;
 
 /**
  * AuthByID
- * Extends AuthMethod.
+ * Extinde AuthMethod.
  * 
- * Checks if an username is allowed or not.
- * The list of allowed usernames is stored as preferences by the ApplicationManager.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Verifica daca userul e acceptat sau nu.
+ * Lista de useri acceptati este stocata ca preferinta de catre ApplicationManager.
  */
 public class AuthByID implements AuthMethod {
 	

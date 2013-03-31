@@ -6,12 +6,8 @@ import java.util.List;
 
 /**
  * Conversation
- * A conversation represents incoming and outgoing messages with the same recipient.
- * Implements Comparable to sort two conversations according to their last message (by date).
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * O conversatie reprezinta mesajele schimbate cu acelasi recipient.
+ * Implementeaza Comparable pentru a sorta doua conversatii dupa ultimul mesaj (mai exact, data lui).
  */
 public class Conversation implements Comparable<Conversation>, Serializable {
 	

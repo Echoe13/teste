@@ -13,17 +13,13 @@ import android.util.Log;
 
 /**
  * Connection
- * Abstract class that defines the global behavior of a connection.
- * This class is used by all the connection types (Wifi & Bluetooth) and 
- * for both sides (client & server).
+ * Clasa abstracta care defineste comportamentul general al unei conexiuni.
+ * Clasa e folosita de toate tipurile de conexiune (Wifi & Bluetooth)
+ * si de ambele moduri (Client & Server).
  * 
- * It has methods to write packets in the connection.
- * Implements Runnable to have his own thread for reading the incoming connection,
- * and then routing the read packets to a handler.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Are metode pentru scrierea de pachete in conexiunea.
+ * Implementeaza Runnable pentru a avea propriul thread de citire a conexiunilor care intra,
+ * pentru ca mai apoi sa routeze pachetele citite catre un handler.
  */
 public abstract class Connection implements Runnable, Serializable {
 	private static final long serialVersionUID = 6234567955793245005L;

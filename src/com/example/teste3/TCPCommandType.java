@@ -1,12 +1,8 @@
 package com.example.teste3;
 /**
  * TCPCommandType
- * Enumeration used in the Packet to make the receiver knows
- * how he has to process.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Enumeratie folosita in Packet pentru ca destinatarul sa stie
+ * cum trebuie sa proceseze informatia.
  */
 public enum TCPCommandType {
 	SEND_ID,

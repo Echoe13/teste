@@ -4,11 +4,7 @@ import java.io.Serializable;
 
 /**
  * PacketClient
- * Extends the class Packet in order to add the client username.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde clasa Packet pentru a adauga numele userului.
  */
 public class PacketClient extends Packet {
 

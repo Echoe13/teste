@@ -61,7 +61,7 @@ public class ClientBluetoothSettings extends Activity {
     {
     	switch (requestCode) {
         case REQUEST_CONNECT_DEVICE:
-            // When DeviceListActivity returns with a device to connect
+            // Cnad DeviceListActivity returneaza un dispozitiv la care sa se conecteze
             if (resultCode == Activity.RESULT_OK) {
                 String address = data.getExtras().getString(BluetoothDiscovery.EXTRA_DEVICE_ADDRESS);
                	String username = ((EditText)findViewById(R.id.usernameText)).getText().toString();
@@ -77,10 +77,10 @@ public class ClientBluetoothSettings extends Activity {
             }
             break;
         case REQUEST_ENABLE_BT:
-            // When the request to enable Bluetooth returns
+            // Cand se intoarce cererea de pornire Bluetooth
             if (resultCode == Activity.RESULT_OK) {
             } else {
-                // User did not enable Bluetooth or an error occured
+                // Userul nu a pornit Bluetooth, sau a aparut o eroare
                 Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
                 finish();
             }

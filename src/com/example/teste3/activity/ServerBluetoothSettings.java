@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+// Setarile pentru Bluetooth.
 public class ServerBluetoothSettings extends Activity {
 
     private BluetoothAdapter bluetoothAdapter = null;
@@ -21,15 +22,19 @@ public class ServerBluetoothSettings extends Activity {
 		setContentView(R.layout.server_bluetooth);
 
 
+		// Variabila care ia referinta catre adaptorul de Bluetooth.
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        // Daca adaptorul nu exista -- variabila == null -- , afiseaza mesaj catre user.
         if (bluetoothAdapter == null) {
 			Toast.makeText(this, "Bluetooth not supported on this device", Toast.LENGTH_LONG).show();
         }
+        // Daca Bluetooth exista, cere pornirea sa -- va aparea prompt pentru user, din OS.
         else if (!bluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         }
 
+        // Seteaza buton pentru Inapoi.
 		Button btnBack = (Button) findViewById(R.id.backBTServerBtn);
 		btnBack.setOnClickListener(new OnClickListener() {
 
@@ -39,6 +44,7 @@ public class ServerBluetoothSettings extends Activity {
 			}
 		});
 
+		// Seteaza buton pentru Inainte.
 		Button btnConnect = (Button) findViewById(R.id.nextBTServerBtn);
 		btnConnect.setOnClickListener(new OnClickListener() {
 
@@ -48,6 +54,7 @@ public class ServerBluetoothSettings extends Activity {
 			}
 		});
 
+		// Seteaza buton pentru Avansat.
 		Button btnAdvanced = (Button) findViewById(R.id.advancedSettingsBtn);
 		btnAdvanced.setOnClickListener(new OnClickListener() {
 
@@ -58,6 +65,7 @@ public class ServerBluetoothSettings extends Activity {
 		});
 	}
 	
+	// Returneaza rezultatele in urma rularii activitatii.
 	public void onActivityResult(int requestCode, int resultCode, Intent data) 
 	{
 		if (requestCode == REQUEST_ENABLE_BT) {

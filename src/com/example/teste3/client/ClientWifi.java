@@ -8,11 +8,7 @@ import com.example.teste3.ConnectionWifi;
 
 /**
  * ClientWifi
- * Extends Client in order to instantiate the ConnectionWifi.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde Client pentru a instantia ConnectionWifi.
  */
 public class ClientWifi extends Client {
 

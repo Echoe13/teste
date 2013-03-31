@@ -20,10 +20,12 @@ public class AuthorizedUsernamesAdapter extends BaseAdapter implements OnClickLi
 		this.context = context;
 	}
 
+	// Ia numarul de useri autorizati.
 	public int getCount() {
 		return ApplicationManager.getInstance().getAuthorizedUsernames().size();
 	}
 
+	// Preia obiect de tip Object
 	public Object getItem(int position) {
 		int i = 0;
 		Iterator<String> it = ApplicationManager.getInstance().getAuthorizedUsernames().iterator();
@@ -34,6 +36,7 @@ public class AuthorizedUsernamesAdapter extends BaseAdapter implements OnClickLi
 		return it.next();
 	}
 
+	// Preia ID-ul obiectului
 	public long getItemId(int position) {
 		return position;
 	}
@@ -54,7 +57,7 @@ public class AuthorizedUsernamesAdapter extends BaseAdapter implements OnClickLi
 		TextView username = (TextView) convertView.findViewById(R.id.username);
 		username.setText(entry);
 
-		// Set the onClick Listener on this button
+		// Seteaza onClick Listener pe acest buton
 		Button btnRemove = (Button) convertView.findViewById(R.id.btnRemove);
 		btnRemove.setFocusableInTouchMode(false);
 		btnRemove.setFocusable(false);
@@ -64,6 +67,7 @@ public class AuthorizedUsernamesAdapter extends BaseAdapter implements OnClickLi
 		return convertView;
 	}
 
+	// Pentru sters intrari in lista de useri autorizati
 	@Override
 	public void onClick(View view) {
 		String entry = (String) view.getTag();

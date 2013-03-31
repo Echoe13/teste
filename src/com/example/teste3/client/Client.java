@@ -23,16 +23,11 @@ import android.widget.Toast;
 
 /**
  * Client
- * Abstract class derived in order to refined the Connection type (Wifi, Bluetooth).
- * 
- * Keeps the connection to the server.
- * Stores conversations.
- * Handles new incoming messages from the server.
- * Has public methods called by the UI.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Clasa care administreaza tipul conexiunii (Wifi, Bluetooth).
+ * Pastreaza conexiunea cu serverul.
+ * Stocheaza conversatiile.
+ * Gestioneaza mesajele nou-venite dinspre server.
+ * Are metode publice apelate de catre interfata cu userul.
  */
 public abstract class Client {
 

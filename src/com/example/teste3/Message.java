@@ -5,17 +5,14 @@ import java.util.Date;
 
 /**
  * Message
- * Class made abstract to allow new message types in the future (eg: MMS).
- * All the subclasses has to implement getTextContent(), method used to
- * render the message in the messages list.
+ * Clasa abstracta ce ar trebui sa poata sustine alte tipuri de mesaj in viitor (de ex: MMS).
+ * Toate subclasele trebuie sa implementeze getTextContent(), metoda folosita pentru a
+ * afisa mesajul in lista de conversatii.
  * 
- * A message contains only the data on the message (status, type, date, content) but no data about the recipient
- * (it is stored at the Conversation level).
- * Implements Comparable to sort two messages according to their dates.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Un mesaj contine doar datele din acel mesaj 
+ * (status, tip, data, continut) dar nicio informatie despre recipient
+ * (este stocata la nivelul Conversation).
+ * Implementeaza Comparable pentru a sorta mesajele dupa data.
  */
 public abstract class Message implements Serializable, Comparable<Message> {
 	

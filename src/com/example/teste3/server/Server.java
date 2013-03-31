@@ -34,18 +34,14 @@ import android.util.Pair;
 
 /**
  * Server
- * Abstract class derived in order to refined the Connection type (Wifi, Bluetooth).
+ * Clasa abstracta, derivata, care administreaza conexiunea (Wifi, Bluetooth).
  * 
- * Manages the authentication of new clients.
- * Keeps one connection with each connected client.
- * Routes new messages received to the clients.
- * Routes new messages from the clients to their recipients.
- * Notifies an handler when stats and info changes
- * (this is used to display real-time info on the server UI).
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Administreaza autentificarea clientilor.
+ * Mentine cate o conexiune activa cu fiecare client conectat.
+ * Routeaza mesajele primite catre client.
+ * Routeaza mesajele de la clienti catre destinatari, in reteaua GSM.
+ * Notifica handlerul cand statisticile si informatiile se modifica
+ * (folosit pentru a afisa informatii in timp real pe interfata cu utilizatorul).
  */
 public abstract class Server implements Runnable {
 
@@ -207,7 +203,7 @@ public abstract class Server implements Runnable {
 				activeConnections.get(client.getKey()).first.write(TCPCommandType.MSG_RECEIVED, conv);
 			}
 		}
-		// sends to clients who has the phone number
+		// Trimite catre clientii cu numar de telefon
 //		if (!activeClients) {
 //			for (String id : activeConnections.keySet()) {
 //				if (lookupContact(id, conv.getContactPhoneNumber())) {
@@ -216,7 +212,7 @@ public abstract class Server implements Runnable {
 //				}
 //			}
 //		}
-		// sends to all the clients
+		// Trimite catre toti clientii
 		if (!activeClients && !inContacts) {
 			for (String username : this.activeConnections.keySet()) {
 				activeConnections.get(username).first.write(TCPCommandType.MSG_RECEIVED, conv);
@@ -273,19 +269,19 @@ public abstract class Server implements Runnable {
 			return;
 		}
 		if (!acceptNewClient()) {
-			// limit nb clients reache
+			// S-a atins limita de clienti conectati
 			con.write(TCPCommandType.AUTH_FAILED, "Limit nb clients reached.");
 			return;
 		}
 
 		Class<? extends AuthMethod> authMethod = getAuthMethod();
 		if (authMethod == AuthByPassword.class) {
-			// request password
+			// Cere parola
 			con.write(TCPCommandType.REQUEST_PASSWORD);
 			return;
 		}
 		if (!idAllowed(id)) {
-			// client id refused
+			// ID-ul clientului e refuzat
 			con.write(TCPCommandType.AUTH_FAILED, "Client ID refused.");
 		} else {
 			onClientAccepted(id, con);

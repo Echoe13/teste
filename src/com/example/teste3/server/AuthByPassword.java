@@ -2,14 +2,10 @@ package com.example.teste3.server;
 
 /**
  * AuthByPassword
- * Extends AuthMethod.
+ * Extinde AuthMethod.
  * 
- * Checks if the password matches the one set.
- * The password is stored as preferences by the ApplicationManager.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Verifica daca parola este identica celei introduse.
+ * Parola este stocata ca preferinta de catre ApplicationManager.
  */
 public class AuthByPassword implements AuthMethod {
 	

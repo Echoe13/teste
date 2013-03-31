@@ -15,14 +15,9 @@ import android.database.sqlite.SQLiteDatabase;
 
 /**
  * ConversationsDataSource
- * Manage the data source for Conversations.
- * 
- * It has public methods that interact directly with the data source 
- * (eg: to add a new conversation).
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Gestioneaza sursa de date pentru Conversations.
+ * Are metode publice care interactioneaza direct cu sursa de date 
+ * (de ex: ca sa adauge o conversatie noua).
  */
 public class ConversationsDataSource {
 

@@ -8,14 +8,9 @@ import android.util.Log;
 
 /**
  * ConnectionWifi
- * Extends the class Connection.
- * 
- * It defines the specific connection layer for a generic internet connection,
- * which consists in the management of a Socket.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde clasa Connection.
+ * Defineste stratul de conexiune specific, pentru o conexiune generica la internet,
+ * care consta in gestionarea unui Socket.
  */
 public class ConnectionWifi extends Connection {
 	private static final long serialVersionUID = 3814390935633064620L;

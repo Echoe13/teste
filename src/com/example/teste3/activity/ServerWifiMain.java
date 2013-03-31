@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Clasa pentru setarile principale ale Serverului in conexiune Wifi.
 public class ServerWifiMain  extends Activity {
 	private TextView ipAdressShow;
 	private TextView portServerShow;
@@ -29,6 +30,7 @@ public class ServerWifiMain  extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.server_main);
+		// ????????????? -- urmeaza sa vad ce naiba face asta.
 		try {
 			ApplicationManager.getInstance().getServer().setRedrawHandler(redrawHandler);
 		} catch (Exception e) {
@@ -36,6 +38,7 @@ public class ServerWifiMain  extends Activity {
 		}
 	}
 	
+	// Stabileste portul prin care se va realiza comunicatia Wifi.
 	@Override
 	public void onStart() {
 		super.onStart();
@@ -45,6 +48,7 @@ public class ServerWifiMain  extends Activity {
 		manadgeTextviews();
 	}
 	
+	// Manager pentru mesajele care apar in cazul acestei conexiuni.
 	private void manadgeTextviews() {
 		nbMaxClientShow = (TextView)findViewById(R.id.nbMaxClient);
 		nbAwaitingClientShow = (TextView)findViewById(R.id.nbAwaitingClient);
@@ -62,6 +66,7 @@ public class ServerWifiMain  extends Activity {
 		}
 	}
 	
+	// Inflater pentru meniu (cele 3 puncte din dreapta sus).
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -69,6 +74,7 @@ public class ServerWifiMain  extends Activity {
         return true;
     }
 
+	// Gestionarea mesajelor care pot veni in timpul operatiunilor.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -101,6 +107,7 @@ public class ServerWifiMain  extends Activity {
         return false;
     }
     
+    // Handler pentru mesajele ce pot veni in timpul operatiilor de conectare.
     public class RefreshHandler extends Handler {  
 		public void handleMessage(android.os.Message msg) {
 			switch (msg.what) {

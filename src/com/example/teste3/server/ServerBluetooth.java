@@ -14,11 +14,7 @@ import android.util.Log;
 
 /**
  * ServerBluetooth
- * Extends Server in order to instantiate the ConnectionBluetooth.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde Server pentru a instantia ConnectionBluetooth.
  */
 public class ServerBluetooth extends Server {
 

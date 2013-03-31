@@ -56,7 +56,7 @@ public class MessagesList extends Activity {
     @Override
     public void onStart() {
     	super.onStart();
-    	// Initialize the array adapter for the conversation thread
+    	// Initializeaza adaptorul pentru lista de conversatie
         conversationView = (ListView) findViewById(R.id.in);
         conversationView.setAdapter(adapter);
         conversationView.setOnItemLongClickListener(new OnItemLongClickListener() {
@@ -70,28 +70,28 @@ public class MessagesList extends Activity {
         	
 		});
         
-        // Initialize the compose field with a listener for the return key
+        // Initializeaza campul de completare a mesajului, cu Listener pe butonul Send
         outEditText = (EditText) findViewById(R.id.edit_text_out);
         outEditText.setOnEditorActionListener(mWriteListener);
 
-        // Initialize the send button with a listener that for click events
+        // Initializeaza butonul de Send cu Listener pt click-urile sale
         sendButton = (Button) findViewById(R.id.button_send);
         sendButton.setOnClickListener(new OnClickListener() {
         	public void onClick(View v) {
-                // Send a message using content of the edit text widget
+                // Trimite un mesaj, folosind continutul widgetului edit text
                 sendMessage(outEditText.getText().toString());
             }
         });
 
-        // Initialize the buffer for outgoing messages
+        // Initializeaza bufferul pt mesajele care ies
         outStringBuffer = new StringBuffer("");
     }
     
     private void sendMessage(String message) {
 
-        // Check that there's actually something to send
+        // Verifica daca exista ceva de trimis
         if (message != null) {
-            // Get the client and tell him to send message
+            // Preia clientul si ii spune sa trimita mesaj
         	try {
 				ApplicationManager.getInstance().getClient().sendTextMessage(message, ApplicationManager.getInstance().getClient().getAdapter().getConversations().get(adapter.getId()).getContactPhoneNumber());
 			} catch (Exception e) {
@@ -99,7 +99,7 @@ public class MessagesList extends Activity {
 				ApplicationManager.appendLog(Log.ERROR, "Sending message", "Impossible to send a message");
 			}
 
-            // Reset out string buffer to zero and clear the edit text field
+            // Reseteaza bufferul la zero si sterge campul completat anterior
             outStringBuffer.setLength(0);
             outEditText.setText(outStringBuffer);
         }
@@ -134,11 +134,11 @@ public class MessagesList extends Activity {
 		return super.onContextItemSelected(item);
 	}
     
-    // The action listener for the EditText widget, to listen for the return key
+    // Listener de actiune pentru widgetul EditText, care asculta dupa butonul de intoarcere
     private TextView.OnEditorActionListener mWriteListener =
         new TextView.OnEditorActionListener() {
         public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-            // If the action is a key-up event on the return key, send the message
+            // Daca actiunea este un eveniment "key-up" pe tasta de return, trimite mesajul
             if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
                 sendMessage(outEditText.getText().toString());
             }

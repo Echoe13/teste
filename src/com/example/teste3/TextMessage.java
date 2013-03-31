@@ -4,11 +4,7 @@ import java.util.Date;
 
 /**
  * TextMessage
- * Extends the class Message and is used for SMS.
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde clasa Message si este folosita pentru SMS.
  */
 public class TextMessage extends Message {
 	

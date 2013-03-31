@@ -12,11 +12,7 @@ import android.util.Log;
 
 /**
  * ClientBluetooth
- * Extends Client in order to instantiate the ConnectionBluetooth. 
- * 
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde Client pentru a instantia ConnectionBluetooth. 
  */
 public class ClientBluetooth extends Client {
 	

@@ -7,13 +7,8 @@ import android.util.Log;
 
 /**
  * ConversationsHelper
- * Extends SQLiteOpenHelper
- * 
- * Manages database creation and version management for the Conversations.
- *  
- * @author Jonathan Perichon <jonathan.perichon@gmail.com>
- * @author Lucas Gerbeaux <lucas.gerbeaux@gmail.com>
- *
+ * Extinde SQLiteOpenHelper
+ * Administreaza crearea de baze de date si managementul versiunilor pentru Conversations.
  */
 public class ConversationsHelper extends SQLiteOpenHelper {
 
