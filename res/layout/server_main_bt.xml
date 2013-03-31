@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView
+        android:id="@+id/titleServ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/titleServ"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/portServDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleServ"
+        android:text="@string/portServDesc" />
+
+    <TextView
+        android:id="@+id/portServ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/portServDesc"
+        android:text="@string/portServ"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/nbMaxClientDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/portServ"
+        android:text="@string/nbMaxClientDesc" />
+
+    <TextView
+        android:id="@+id/nbMaxClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nbMaxClientDesc"
+        android:text="@string/nbMaxClient"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+	<TextView
+        android:id="@+id/nbAwaitingClientDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nbMaxClient"
+        android:text="@string/nbAwaitingClientDesc" />
+    
+	<TextView
+        android:id="@+id/nbAwaitingClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nbAwaitingClientDesc"
+        android:text="@string/nbAwaitingClient"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+	<TextView
+        android:id="@+id/discovTimeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nbAwaitingClient"
+        android:text="@string/DiscoverText" />
+
+    <EditText
+        android:id="@+id/discovTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/discovTimeDesc"
+        android:ems="10"
+        android:inputType="number"/>
+	
+    <Button
+        android:id="@+id/BtConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/discovTime"
+        android:text="@string/BtConnection" />
+    
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/removeFocus"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true"
+    	android:layout_width="0px" 
+    	android:layout_height="0px"/>
+    
+    <TextView
+        android:id="@+id/nbMaxMessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TextNbMessMax"/>
+
+    <EditText
+        android:id="@+id/nbMaxMessEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nbMaxMessTitle"
+        android:ems="10"
+        android:inputType="number"/>
+    
+    <TextView
+        android:id="@+id/nbMaxClientsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nbMaxMessEdit"
+        android:text="@string/TextNbMax"/>
+
+    <EditText
+        android:id="@+id/nbMaxClientsEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nbMaxClientsTitle"
+        android:ems="10"
+        android:inputType="number"/>
+    
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nbMaxClientsEdit" 
+        android:text="@string/Option"/>
+	
+    <RadioGroup
+        android:id="@+id/authentificationTypeSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2" >
+
+        <RadioButton
+            android:id="@+id/passwordAuthentificationRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PassAuth" />
+
+        <RadioButton
+            android:id="@+id/idAuthentificationRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IDAuth" 
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/noAuthentificationRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NoAuth" />
+    </RadioGroup>
+    
+	<TextView
+        android:id="@+id/listAllowedIdsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authentificationTypeSelector"
+        android:text="@string/List"/>
+    
+	<RelativeLayout
+	    android:id="@+id/buttons"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        
+	<Button
+	    android:id="@+id/serverOptionAddBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/Add" />
+	
+	
+    <Button
+        android:id="@+id/serverOptionDoneBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/OkButton" />
+	
+    <Button
+	    android:id="@+id/serverOptionPasswordBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/SetPasswd"
+	    android:visibility="invisible"/>
+    
+	</RelativeLayout>
+    
+	<ListView
+	    android:id="@+id/allowedIDsList"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:layout_below="@+id/listAllowedIdsTitle"
+        android:stackFromBottom="false"
+        android:layout_above="@id/buttons"/>
+	
+
+</RelativeLayout>

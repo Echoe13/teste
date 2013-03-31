@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/btServerOptionTitle"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/advancedSettingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:text="@string/AdvancedSettingsButton" />
+
+    <Button
+        android:id="@+id/nextBTServerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15sp"
+        android:layout_marginTop="15sp"
+        android:layout_below="@+id/advancedSettingsBtn"
+        android:text="@string/BtNextBtn" />
+
+    <Button
+        android:id="@+id/backBTServerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15sp"
+        android:layout_toLeftOf="@+id/nextBTServerBtn"
+        android:layout_alignBaseline="@+id/nextBTServerBtn"
+        android:text="@string/BtBack" />
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/portServerWifiTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SetPort" />
+
+    <EditText
+        android:id="@+id/portServerWifiEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portServerWifiTitle"
+        android:ems="10"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/advancedSettingsServerWifiBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portServerWifiEdit"
+        android:layout_centerHorizontal="true"
+        android:text="@string/AdvancedSettings" />
+
+    <Button
+        android:id="@+id/connectionServerWifiBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/advancedSettingsServerWifiBtn"
+        android:layout_alignParentRight="true"
+        android:text="@string/ConnectionButton" />
+
+    <Button
+        android:id="@+id/wifiServerBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/advancedSettingsServerWifiBtn"
+     	android:layout_toLeftOf="@+id/connectionServerWifiBtn"
+        android:text="@string/BackButton" />
+
+</RelativeLayout>
